@@ -1,4 +1,3 @@
-
 h1{
   font-size: 32rem;
 }
@@ -90,3 +89,15 @@ h1{
 .array button{
   margin: auto 7px;
 }
+
+/* a.nostyle {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+} */
