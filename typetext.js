@@ -11,6 +11,7 @@ var TxtType = function(el, toRotate, period) {
     TxtType.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
+        var rngTxt = 'Hey there traveller';
 
         if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -27,17 +28,15 @@ var TxtType = function(el, toRotate, period) {
 
 
         var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
+        var delta = 110;
 
         if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
+        delta = 200;
         this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
+        this.loopNum++
         }
 
         setTimeout(function() {
