@@ -1,18 +1,21 @@
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
+        this.period = period;
         this.txt = '';
         this.tick();
         this.isDeleting = false;
+        this.value = 0;
     };
 
     TxtType.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
-        var rngTxt = 'Hey there traveller';
-
         if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
@@ -28,15 +31,15 @@ var TxtType = function(el, toRotate, period) {
 
 
         var that = this;
-        var delta = 110;
+        var delta = 130;
 
         if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
-        delta = 200;
+        delta = 300;
         this.isDeleting = false;
-        this.loopNum++
+        this.loopNum = getRndInteger(1,this.toRotate.length)
         }
 
         setTimeout(function() {

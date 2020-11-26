@@ -25,36 +25,50 @@
   <body class = "back">
     <section class="landing-page">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-dark ml-auto">
           <a href="index.html">
             <img class = "navbar-brand" src="Logo.png" width = 35rem height = 45rem alt="Projec.ts">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Projects Page.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="challenge.html">Assets</a>
-              </li>
-            </ul>
-            <a href="#Contact" class = "contact-nav">
-              <img class = "navbar-brand" src="Contact.png" width = 35rem height = 45rem alt="Contact">
-            </a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Projects Page.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="challenge.html">Assets</a>
+                </li>
+                <li>
+                  <a href="#Contact" class = "contact-nav">
+                    <img class = "navbar-brand" src="Contact.png" width = 35rem height = 45rem alt="Contact">
+                  </a>
+                </li>
+              </ul>
+        </div>
         </nav>
       </div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-7">
             <h1 class="landing-title">
-              <a class="typewrite" data-period="2000" data-type='[ "Welcome to Projec.ts"]'>
+              <a class="typewrite"
+                 data-period=4000
+                 data-type='[ "Welcome to Projec.ts",
+                              "Добро пожаловать",
+                              "いらっしゃい!",
+                              "So many options, so little time",
+                              "Спасибо за посещение",
+                              "Umm... Well this is awkward...",
+                              "Always working on something... I think...",
+                              "Only two countries use purple in their national flags",
+                              "Why are you still reading this?",
+                              "I used to be an adventurer like you...",
+                              "You were expecting a title but it was me typetext.js"]'>
               <span class="wrap"></span>
             </a>
             </h1>
@@ -114,5 +128,6 @@
           </div>
         </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
